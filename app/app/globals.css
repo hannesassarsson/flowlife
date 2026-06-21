@@ -1,0 +1,37 @@
+/**
+ * app/globals.css
+ *
+ * Tailwind v4 — no tailwind.config.js needed; theme tokens are declared
+ * directly in CSS via @theme. Palette values match the seeded
+ * company_branding row for Nordic Homes AB (charcoal / off-white / warm
+ * tan) so the slice's visual language traces back to real seed data
+ * rather than an arbitrary choice. Scandinavian brief: flat surfaces, no
+ * heavy shadows, generous whitespace, one warm accent against a cool
+ * neutral field.
+ */
+
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1a1a1a;
+  --color-paper: #f5f5f0;
+  --color-accent: #d4a574;
+  --color-line: #e2e0d8;
+  --color-muted: #6b6b63;
+  --color-danger: #b3432f;
+  --color-success: #4a6b52;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Visible keyboard focus everywhere — no design system should remove this. */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
